@@ -162,11 +162,74 @@
         <!-- End Header -->
         <!-- === END HEADER === -->
 				<!-- === BEGIN CONTENT === -->
+
+        <!-- Presentation -->
+        <div id="welcome" class="parallax-bg4">
+            <div class="container">
+              <br>
+              <div class="row">
+                <h2 class="text-center article-title">Presentation</h2>
+                <hr>
+              </div>
+              <div class="row margin-vert-90">
+                <div class="col-md-4">
+                  <img src="/img/Aby.jpg" alt="" />
+                </div>
+                <div class="col-md-8">
+                  <!-- Accordion -->
+                  <div id="accordion" class="panel-group">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <h4 class="panel-title">
+                                  <a class="accordion-toggle" href="#collapse-One" data-parent="#accordion" data-toggle="collapse">
+                                    Date de cr&eacute;tion
+                                  </a>
+                              </h4>
+                          </div>
+                          <div id="collapse-One" class="accordion-body collapse in">
+                              <div class="panel-body">
+                                  <div class="row">
+                                      <div class="col-md-7">
+                                          <h3 class="no-margin no-padding">Humanitatis Per Seacula</h3>
+                                          <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus,
+                                              qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothicas.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <h4 class="panel-title">
+                                  <a class="accordion-toggle" href="#collapse-Two" data-parent="#accordion" data-toggle="collapse">
+                                      Historique
+                                  </a>
+                              </h4>
+                          </div>
+                          <div id="collapse-Two" class="accordion-body collapse">
+                              <div class="panel-body">
+                                  <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui
+                                      sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem
+                                      modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+                  <!-- End Accordion -->
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- End Presentation -->
+
+
+        <!-- Noyau -->
         <div id="welcome" class="parallax-bg2">
             <div class="container">
               <br>
               <div class="row">
-                <h2 class="text-center article-title" style="color: #f9f9f9;">Notre Noyau</h2>
+                <h2 class="text-center article-title">Notre Noyau</h2>
                 <hr>
               </div>
               <% @noyaus.each do |noyau| %>
@@ -176,7 +239,7 @@
                     <%= image_tag noyau.photo.url, style: 'display: block; margin-left: auto; margin-right: auto; margin-top: -28px;', class: 'fadeInUp animate img-circle' %>
                     </div>
                     <div class="col-md-8">
-                        <h2 class="text-center article-title" style="color: #f9f9f9;"><%= noyau.role %> : <%= noyau.prenom+' '+noyau.nom %></h2>
+                        <h2 class="text-center article-title"><%= noyau.role %> : <%= noyau.prenom+' '+noyau.nom %></h2>
                         <p class="text-center well"> <%= noyau.parole %></p>
                     </div>
                     <!-- End Main Text -->
@@ -189,6 +252,8 @@
                 <% end %>
             </div>
         </div>
+        <!-- Noyau -->
+
         <!-- Icons -->
         <div id="icons" class="parallax-bg1 text-light background-primary" style="background-position: 50% 0%;" data-stellar-background-ratio="0.5">
             <div class="container">
