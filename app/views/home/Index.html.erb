@@ -164,18 +164,29 @@
 				<!-- === BEGIN CONTENT === -->
         <div id="welcome" class="parallax-bg2">
             <div class="container">
+              <br>
+              <div class="row">
+                <h2 class="text-center article-title" style="color: #f9f9f9;">Notre Noyau</h2>
+                <hr>
+              </div>
+              <% @noyaus.each do |noyau| %>
                 <div class="row margin-vert-90">
                     <!-- Main Text -->
                     <div class="col-md-4">
-                      <img class="fadeInUp animate img-circle" alt="" src="../img/papa.jpg" style="display: block; margin-left: auto; margin-right: auto; margin-top: -28px;">
+                    <%= image_tag noyau.photo.url, style: 'display: block; margin-left: auto; margin-right: auto; margin-top: -28px;', class: 'fadeInUp animate img-circle' %>
                     </div>
                     <div class="col-md-8">
-                        <h2 class="text-center article-title" style="color: #f9f9f9;">Joseph Ikinda</h2>
-                        <p class="text-center well">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-                            nisl ut aliquip ex ea commodo consequat.</p>
+                        <h2 class="text-center article-title" style="color: #f9f9f9;"><%= noyau.role %> : <%= noyau.prenom+' '+noyau.nom %></h2>
+                        <p class="text-center well"> <%= noyau.parole %></p>
                     </div>
                     <!-- End Main Text -->
                 </div>
+                <% end %>
+                <% if @noyaus.empty? %>
+                <div class="row">
+                  <%= link_to noyaus_path do %><h2 class="text-center article-title" style="color: #f9f9f9;">not yet</h2><% end %>
+                </div>
+                <% end %>
             </div>
         </div>
         <!-- Icons -->
@@ -205,7 +216,7 @@
         <!-- End Icons -->
 
 
-			
+
 				<!-- Portfolio -->
         <div id="porfolio" class="parallax-bg3" style="background-position: 50% 0%;" data-stellar-background-ratio="0.5">
             <div class="container">

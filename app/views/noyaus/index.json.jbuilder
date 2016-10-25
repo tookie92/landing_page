@@ -1,0 +1,1 @@
+json.array! @noyaus, partial: 'noyaus/noyau', as: :noyau

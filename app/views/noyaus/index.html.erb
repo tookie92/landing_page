@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Noyaus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Parole</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @noyaus.each do |noyau| %>
+      <tr>
+        <td><%= noyau.role %></td>
+        <td><%= noyau.nom %></td>
+        <td><%= noyau.prenom %></td>
+        <td><%= noyau.parole %></td>
+        <td><%= link_to 'Show', noyau %></td>
+        <td><%= link_to 'Edit', edit_noyau_path(noyau) %></td>
+        <td><%= link_to 'Destroy', noyau, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Noyau', new_noyau_path %>

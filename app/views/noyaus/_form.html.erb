@@ -1,0 +1,15 @@
+<%= simple_form_for(@noyau) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :role %>
+    <%= f.input :nom %>
+    <%= f.input :prenom %>
+    <%= f.input :parole %>
+    <%= f.file_field :photo %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

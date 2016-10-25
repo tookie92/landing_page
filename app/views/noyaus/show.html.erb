@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @noyau.role %>
+</p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @noyau.nom %>
+</p>
+
+<p>
+  <strong>Prenom:</strong>
+  <%= @noyau.prenom %>
+</p>
+
+<p>
+  <strong>Parole:</strong>
+  <%= @noyau.parole %>
+</p>
+
+<%= link_to 'Edit', edit_noyau_path(@noyau) %> |
+<%= link_to 'Back', noyaus_path %>

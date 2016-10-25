@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021003703) do
+ActiveRecord::Schema.define(version: 20161025140934) do
+
+  create_table "noyaus", force: :cascade do |t|
+    t.string   "role"
+    t.string   "nom"
+    t.string   "prenom"
+    t.string   "parole"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "photo"
+    t.string   "photo_uid"
+    t.string   "photo_name"
+  end
 
   create_table "testimonials", force: :cascade do |t|
     t.string   "auteur"
